@@ -72,7 +72,7 @@ def startScan(thread):
 def multithreadTask(threadNum, total):
     threadEqualization(threadNum, total)
     for step in range(0, len(targetStepList)):
-        t = Thread(target=runTask, args={targetStepList[step], total})
+        t = Thread(target=runTask, args=(targetStepList[step], total))
         t.start()
     t.join()
 
@@ -104,7 +104,7 @@ def runTask(targets, total):
             else:
                 print(f"[------]    {url}   {pocName}")
         except Exception as e:
-            print(f"[!!!!!!]    {url}   {pocName}   {e}")
+            print(f"[!!!!!!]    {url}   {pocName}")
         num = num + 1
         progress = "进度：" + str(num) + "/" + str(total) + "  " + "百分比：{:.3f}%".format(num / total * 100)
         print(progress, end="")
@@ -121,7 +121,7 @@ def logo():
  |_________| \_________|   |__|    |__|   \_____||_______/|_______/  \___|\__,_||_| |_|
  
  
-                                                       ---by ZCY\r
+                                                       ---by ZCY
     ''')
 
 

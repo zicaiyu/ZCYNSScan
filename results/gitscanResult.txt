@@ -1,0 +1,9 @@
+http://hd.weixin.kongzhong.com/.git/config
+http://jia.liebiao.com/.git/config
+http://xue.liebiao.com/.git/config
+http://kfwechat.37.com/.git/config
+http://lianbo.weather.com.cn/.git/config
+http://newgame.uuu9.com/.git/config
+http://newssrc.onlinedown.net/.git/config
+http://syvote.8264.com/.git/config
+http://v.eol.cn/.git/config

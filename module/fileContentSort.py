@@ -2,17 +2,27 @@ import random
 """
 对文件每行进行乱序重新排序
 """
-def ContentOutOfOrder(filePath, outFilePath):
+
+
+def fileContentSort(filePath, outFilePath):
     lines = []
+    linesTmp = []
     with open(filePath, 'r', encoding="utf-8") as f:
         for line in f:
-            lines.append(line)
-    random.shuffle(lines)
+            linesTmp.append(reverseString(line))
+    linesTmp.sort()
+    for l in linesTmp:
+        lines.append(reverseString(l))
+
     outFile = open(outFilePath, 'w', encoding="utf-8")
     for line in lines:
         outFile.write(line)
     outFile.close()
 
 
+def reverseString(str):
+    return str[::-1]
+
+
 if __name__ == "__main__":
-    ContentOutOfOrder("../data/butianIpWeightOne2Three.txt", "../data/orderButianIpWeightOne2Three.txt")
+    fileContentSort("../data/bt.txt", "../data/bt1.txt")

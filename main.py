@@ -98,13 +98,13 @@ def runTask(targets, total):
             flag = module.doCheck(url)
             if flag:
                 print(f"[++++++]    {url}   {pocName}")
-                ff = open("result.txt", 'a', encoding="utf-8")
-                ff.write(f"{url}     {pocName}\n")
+                ff = open("results/result.txt", 'a', encoding="utf-8")
+                ff.write(f"{flag}\n")
                 ff.close()
             else:
-                print(f"[------]    {url}   {pocName}")
+                print(f"[      ]    {url}   {pocName}")
         except Exception as e:
-            print(f"[!!!!!!]    {url}   {pocName}")
+            print(f"[      ]    {url}   {pocName}")
         num = num + 1
         progress = "进度：" + str(num) + "/" + str(total) + "  " + "百分比：{:.3f}%".format(num / total * 100)
         print(progress, end="")

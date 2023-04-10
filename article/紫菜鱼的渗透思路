@@ -1,4 +1,7 @@
-
+渗透前准备：
+Chrome浏览器安装相关插件：Disable JavaScript、ModHeader - Modify HTTP headers、Proxy SwitchyOmega、
+User-Agent Switcher for Chrome、Wappalyzer - Technology profiler、WebRTC Network Limiter、隐私獾
+网络：VPS+v2ray+树莓派 或者 VPN：ExpressVPN、StrongVPN
 
 
 
@@ -6,6 +9,40 @@
 
 
 信息收集：
+子域名收集：OneForAll 查出来的子域名还能知道是否存在cdn
+
+去鹰图平台搜对应的ip，看是否还有旁站
+
+端口扫描：nmap或者masscan  我一般先用masscan扫描端口，如果还需要详细可以丢到nmap
 
 文件泄漏：
-Google Dork:
+Google Dork 或者 BBScan（容易被封ip） Google Dork相关语法如下:
+1.site:domain.com filetype:doc | filetype:sql | filetype:json | filetype:log
+这个语法可以搜索某个网站上特定文件类型的文件，例如搜索doc、sql、json、log文件。
+2.site:domain.com intitle:"index of"
+这个语法可以搜索某个网站上的目录列表，常用于搜索常见的敏感文件夹，例如备份文件夹。
+3.site:domain.com inurl:password.txt  | inurl:"/ftp/" | inurl:.git |inurl:config | inurl:"/conf/" | inurl:configprops
+这个语法可以搜索网站上的特定文件名，例如搜索密码文件
+4.site:domain.com ext:pdf | ext:doc | ext:docx | ext:xls | ext:xlsx | ext:log | ext:sql | ext:mdb | | ext:ini
+ | ext:xml | ext:env | ext:txt
+这个语法可以搜索网站上常见的办公文档类型，例如PDF、Word、Excel等
+5.site:domain.com intext:"db_password" | intext:"db_username" | intext:"database_password" | intext:"database_username"
+ | intext:"password" | intext:"user" | intext:"phpMyAdmin" | intext:"username" | intext:"admin" | intext:"index of"
+ | intext:管理|登陆｜邮箱｜手机
+这个语法可以搜索网站上包含特定关键词的页面，例如搜索包含“password”的页面
+
+
+
+
+
+收集好相关信息后使用BurpSuite进行测试：
+
+目录扫描：dirsearch
+
+组件的历史漏洞
+
+存在sql注入：
+丢sqlmap里跑
+
+XML注入
+Java的XXE支持file://协议列目录  如：file:///etc/passwd

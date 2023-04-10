@@ -1,4 +1,5 @@
 import random
+import time
 
 import requests
 import urllib3
@@ -37,6 +38,7 @@ def doCheck(url):
             headers = response.headers
             if (status == 200 or status == 206) and "application/" in headers['Content-Type']:
                 return targetUrl
+            time.sleep(1)
 
     return False
 

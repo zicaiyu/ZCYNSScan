@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost/" />
+<title>CreateEditSensitiveinfo</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CreateEditSensitiveinfo</td></tr>
+</thead><tbody>
+<tr>
+  <td>setTimeout</td>
+  <td>45000</td>
+  <td></td>
+</tr>
+<tr>
+  <td>storeGlobal</td>
+  <td>javascript{Math.floor(Math.random()*11000)}</td>
+  <td>randomSuffix</td>
+</tr>
+<tr>
+  <td>open</td>
+  <td>index.php/accounts/default/create</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForPageToLoad</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForTextPresent</td>
+  <td>Create Account</td>
+  <td></td>
+</tr>
+<tr>
+  <td>type</td>
+  <td>Account_name</td>
+  <td>my account ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>clickAndWait</td>
+  <td>save</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForPageToLoad</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForText</td>
+  <td>//div[@id='AccountEditAndDetailsView']/div/div/table/tbody/tr/td</td>
+  <td>my account ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>open</td>
+  <td>index.php/sensitiveinfos/default/create</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForPageToLoad</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForTextPresent</td>
+  <td>Create Sensitiveinfo</td>
+  <td></td>
+</tr>
+<tr>
+  <td>type</td>
+  <td>Sensitiveinfo_name</td>
+  <td>Test Sensitiveinfo ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>type</td>
+  <td>Sensitiveinfo_amount_value</td>
+  <td>500.34</td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>Sensitiveinfo_account_SelectLink</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForElementPresent</td>
+  <td>AccountsSearchForm_anyMixedAttributes</td>
+  <td></td>
+</tr>
+<tr>
+  <td>type</td>
+  <td>AccountsSearchForm_anyMixedAttributes</td>
+  <td>my account ${randomSuffix}</td>
+</tr>
+<tr>
+    <td>keyUp</td>
+    <td>AccountsSearchForm_anyMixedAttributes</td>
+    <td>\10</td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForText</td>
+  <td>//div[@id='list-viewmodal']/table/tbody/tr[1]/td/a</td>
+  <td>my account ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>//div[@id='list-viewmodal']/table/tbody/tr[1]/td/a</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForValue</td>
+  <td>Sensitiveinfo_account_name</td>
+  <td>my account ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>assertNotValue</td>
+  <td>Sensitiveinfo_account_id</td>
+  <td></td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>id=Sensitiveinfo_closeDate</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>//div[@id='ui-datepicker-div']/table/tbody/tr/td[3]/a</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>select</td>
+  <td>Sensitiveinfo_stage_value</td>
+  <td>label=Negotiating</td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>select</td>
+  <td>Sensitiveinfo_source_value</td>
+  <td>label=Tradeshow</td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>Sensitiveinfo_owner_SelectLink</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForElementPresent</td>
+  <td>UsersSearchForm_anyMixedAttributes</td>
+  <td></td>
+</tr>
+<tr>
+  <td>type</td>
+  <td>UsersSearchForm_anyMixedAttributes</td>
+  <td>Sam Smith</td>
+</tr>
+<tr>
+    <td>keyUp</td>
+    <td>UsersSearchForm_anyMixedAttributes</td>
+    <td>\10</td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+    <td>waitForText</td>
+    <td>//div[@id='UsersModalListView']/div/table/tbody/tr/td/a</td>
+    <td>Sam Smith</td>
+</tr>
+<tr>
+  <td>click</td>
+  <td>link=Sam Smith</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForValue</td>
+  <td>Sensitiveinfo_owner_name</td>
+  <td>Sam Smith</td>
+</tr>
+<tr>
+  <td>assertNotValue</td>
+  <td>Sensitiveinfo_owner_id</td>
+  <td></td>
+</tr>
+<tr>
+  <td>clickAndWait</td>
+  <td>save</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForPageToLoad</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForText</td>
+  <td>//div[@id='SensitiveinfoEditAndDetailsView']/div/div/table/tbody/tr/td</td>
+  <td>Test Sensitiveinfo ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>verifyTextPresent</td>
+  <td>Test Sensitiveinfo ${randomSuffix}</td>
+  <td></td>
+</tr>
+<tr>
+  <td>verifyTextPresent</td>
+  <td>500.34</td>
+  <td></td>
+</tr>
+<tr>
+  <td>verifyTextPresent</td>
+  <td>Tradeshow</td>
+  <td></td>
+</tr>
+<tr>
+  <td>verifyTextPresent</td>
+  <td>Negotiating</td>
+  <td></td>
+</tr>
+<tr>
+  <td>assertNotText</td>
+  <td>//div[@id='SensitiveinfoEditAndDetailsView']/div/div[2]/table/tbody/tr[4]/td</td>
+  <td></td>
+</tr>
+<tr>
+  <td>assertText</td>
+  <td>link=my account ${randomSuffix}</td>
+  <td>my account ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>clickAndWait</td>
+  <td>link=Edit</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForPageToLoad</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>select</td>
+  <td>Sensitiveinfo_stage_value</td>
+  <td>label=Closed Won</td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>clickAndWait</td>
+  <td>save</td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForPageToLoad</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+  <td>30000</td>
+</tr>
+<tr>
+  <td>waitForText</td>
+  <td>//div[@id='SensitiveinfoEditAndDetailsView']/div/div/table/tbody/tr/td</td>
+  <td>Test Sensitiveinfo ${randomSuffix}</td>
+</tr>
+<tr>
+  <td>verifyTextPresent</td>
+  <td>Closed Won</td>
+  <td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

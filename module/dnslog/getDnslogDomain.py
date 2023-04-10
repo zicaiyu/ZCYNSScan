@@ -4,8 +4,8 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-def getResult():
-    url = "http://dnslog.cn/getrecords.php"
+def getDnslogDomain():
+    url = "http://dnslog.cn/getdomain.php"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                       "Chrome/111.0.0.0 Safari/537.36",
@@ -18,19 +18,18 @@ def getResult():
         "Accept-Encoding": "gzip, deflate",
         "Accept-Language": "zh-CN,zh;q=0.9"
     }
-    domain = ""
-    cookie = ""
-    result = (domain, cookie)
+    # domain = ""
+    # cookie = ""
+    # result = (domain, cookie)
     try:
         r = requests.get(url, headers=headers, timeout=10, verify=False)
-        domain = r.text
+        # domain = r.text
         cookie = r.headers["Set-Cookie"]
-        result = (domain, cookie)
-        return result
+        return cookie
     except Exception:
         print("[   !   ]    获取dnslog失败")
-        return result
+        return ""
 
 
 if __name__ == "__main__":
-    getDomain()
+    print(getDnslogDomain())

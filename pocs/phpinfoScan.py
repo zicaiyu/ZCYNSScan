@@ -7,7 +7,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def doCheck(url):
-    time.sleep(0.35)
+    time.sleep(1)
     if url[-1] != "/":
         url = url + "/"
     targetUrl = url + "phpinfo.php"

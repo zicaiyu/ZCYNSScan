@@ -9,6 +9,7 @@ targetList = []
 targetStepList = []
 num = 0
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--file", type=str, help="url文件路径")
@@ -97,14 +98,14 @@ def runTask(targets, total):
             module = __import__(pocName)
             flag = module.doCheck(url)
             if flag:
-                print(f"[++++++]    {url}   {pocName}")
+                print(f"[+++++++]    {url}   {pocName}")
                 ff = open("results/result.txt", 'a', encoding="utf-8")
                 ff.write(f"{flag}\n")
                 ff.close()
             else:
-                print(f"[      ]    {url}   {pocName}")
+                print(f"[   -   ]    {url}   {pocName}")
         except Exception as e:
-            print(f"[      ]    {url}   {pocName}")
+            print(f"[   !   ]    {url}   {pocName}")
         num = num + 1
         progress = "进度：" + str(num) + "/" + str(total) + "  " + "百分比：{:.3f}%".format(num / total * 100)
         print(progress, end="")

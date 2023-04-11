@@ -52,5 +52,6 @@ def doCheck(url):
     else:
         return False
 
+
 if __name__ == '__main__':
     print(doCheck("https://autodiscover.equippool.com/"))

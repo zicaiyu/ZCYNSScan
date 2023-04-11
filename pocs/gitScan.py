@@ -1,3 +1,5 @@
+import time
+
 import requests
 import urllib3
 
@@ -5,6 +7,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def doCheck(url):
+    time.sleep(1)
     if url[-1] != "/":
         url = url + "/"
     targetUrl = url + ".git/config"

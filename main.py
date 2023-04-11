@@ -59,8 +59,8 @@ def loadPoc(poc):
 def startScan(thread):
     urlTempList = list(set(urlList))
     pocTempList = list(set(pocList))
-    for url in urlTempList:
-        for poc in pocTempList:
+    for poc in pocTempList:
+        for url in urlTempList:
             targetList.append((url, poc))
     total = len(targetList)
     if total < thread:

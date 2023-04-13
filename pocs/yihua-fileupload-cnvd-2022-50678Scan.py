@@ -1,6 +1,6 @@
 import requests,re,urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(urls):
+def doCheck(urls):
     # try:
         if urls[-1]=='/':
             url = urls + "handle/unloadfile.ashx"

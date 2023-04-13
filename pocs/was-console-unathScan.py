@@ -10,7 +10,7 @@ def randomLowercase(n):
 		key+=zf[suiji1]
 	return key
 user=randomLowercase(8)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+'ibm/console/login.do'
 	headers={"Content-Type": "application/x-www-form-urlencoded"}
 	body=f'username={user}&submit=Log+in'

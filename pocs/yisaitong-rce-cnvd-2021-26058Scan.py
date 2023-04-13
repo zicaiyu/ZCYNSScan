@@ -4,7 +4,7 @@ import requests,re,urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-def scan(baseurl):
+def doCheck(baseurl):
     url = '{}solr/admin/cores'.format(baseurl)
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0'

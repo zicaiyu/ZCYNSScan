@@ -10,7 +10,7 @@ def randomLowercase(n):
 		key+=zf[suiji1]
 	return key
 r1=randomLowercase(5)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+"/api/v1/authentication/connection-token/"
 	headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0"}
 	response=requests.get(url,headers=headers,timeout=5,verify=False)

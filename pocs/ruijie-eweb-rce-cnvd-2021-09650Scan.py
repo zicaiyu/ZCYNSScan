@@ -23,7 +23,7 @@ phpcode=f'''
 "<?php echo '{r1}'; unlink(__FILE__); ?>"
 '''
 payload=base64.b64encode(phpcode.encode()).decode()
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=='/':
 		baseurl=baseurl
 	else:

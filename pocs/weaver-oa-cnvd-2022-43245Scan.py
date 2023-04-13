@@ -4,7 +4,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 def base64_decoding(string):
     string=base64.b64decode(string.encode())
     return string.decode()
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

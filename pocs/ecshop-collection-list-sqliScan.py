@@ -21,7 +21,7 @@ phone=str(randomInt(1000000000,9999999999))
 def substr(strs,s,lens):
 	result=strs[s:lens]
 	return result
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=='/':
 		baseurl=baseurl
 	else:

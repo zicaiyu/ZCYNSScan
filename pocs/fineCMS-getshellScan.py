@@ -23,7 +23,7 @@ f1=str(randomInt(1000, 2000))
 f2=base64_encoding("\""+md5(str(f1).encode()).hexdigest()+"\"")
 f3=randomLowercase(8)
 f4=base64_encoding(f'<?php echo "{f3}";?>')
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

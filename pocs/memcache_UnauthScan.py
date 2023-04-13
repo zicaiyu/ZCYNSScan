@@ -6,7 +6,7 @@ def getdomain(url):
 	url = url + '/'
 	url = url.split('/')[0]
 	return url
-def scan(baseurl):
+def doCheck(baseurl):
 	domain=getdomain(baseurl)
 	ip=domain.split(':')[0]
 	port=int(domain.split(':')[1])

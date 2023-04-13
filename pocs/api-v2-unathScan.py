@@ -1,7 +1,7 @@
 import requests,re,urllib3
 from hashlib import md5
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(url):
+def doCheck(url):
 	if url[-1]=='/':
 		url2=url+'v2/api-docs'
 	else:

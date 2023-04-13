@@ -6,7 +6,7 @@ def randomInt(s,e):
 	key=random.randint(int(s),int(e))
 	return key
 rand=randomInt(1, 100)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+f"fs/console?username={rand}"
 	headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0"}
 	response=requests.get(url,headers=headers,timeout=5,verify=False)

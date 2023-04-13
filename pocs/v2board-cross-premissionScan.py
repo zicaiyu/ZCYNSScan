@@ -12,7 +12,7 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.7113.93 Safari/537.36',
 }
 
-def scan(target):
+def doCheck(target):
     """
     检测目标v2board是否为v1.6.1漏洞版本
     """

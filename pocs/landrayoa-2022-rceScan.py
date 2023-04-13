@@ -6,7 +6,7 @@ cwd=os.getcwd()
 sys.path.append(cwd+'\\reverse')
 from getdomain import get_domain
 from getresult import get_result
-def scan(baseurl):
+def doCheck(baseurl):
     gets=get_domain()
     domain=gets[0]
     token=gets[1]

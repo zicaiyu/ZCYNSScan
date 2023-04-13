@@ -6,7 +6,7 @@ def randomInt(s,e):
 	key=random.randint(int(s),int(e))
 	return key
 a=randomInt(1000000000, 9000000000)
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

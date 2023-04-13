@@ -1,6 +1,6 @@
 import paramiko,re
 import argparse
-def scan(baseurl):
+def doCheck(baseurl):
 	total=[]
 	flag=[]
 	user_list=['root','admin','test','system','web']

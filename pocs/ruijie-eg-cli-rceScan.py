@@ -11,7 +11,7 @@ def randomInt(s,e):
 	key=random.randint(int(s),int(e))
 	return key
 r22=randomInt(8000, 10000)
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=='/':
 		baseurl=baseurl
 	else:

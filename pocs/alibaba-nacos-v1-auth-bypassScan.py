@@ -19,7 +19,7 @@ def randomLowercase(n):
 		key+=zf[suiji1]
 	return key
 r22=randomLowercase(16)
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=='/':
 		baseurl=baseurl
 	else:

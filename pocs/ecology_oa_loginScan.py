@@ -1,6 +1,6 @@
 import requests,re,urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(url):
+def doCheck(url):
     if url[-1]=='/':
         urls = url + "mobile/plugin/VerifyQuickLogin.jsp"
     else:

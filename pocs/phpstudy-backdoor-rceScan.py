@@ -13,7 +13,7 @@ def randomLowercase(n):
 r=randomLowercase(6)
 string="printf(md5('" + r + "'));"
 payload=base64.b64encode(string.encode()).decode()
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=='/':
 		baseurl=baseurl
 	else:

@@ -126,7 +126,7 @@ class Scanner(object):
         self.thread_count -= 1
         self.lock.release()
 
-    def scan(self):
+    def doCheck(self):
         for i in range(self.thread_count):
             t = threading.Thread(target=self.get_back_file)
             t.start()

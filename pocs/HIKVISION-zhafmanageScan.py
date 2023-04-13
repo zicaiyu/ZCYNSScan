@@ -13,7 +13,7 @@ rand=randomInt(100000, 200000)
 def description():
 	link='https://mp.weixin.qq.com/s/y30HwEfYsMyndk1Ra1zz8w'
 	return link
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

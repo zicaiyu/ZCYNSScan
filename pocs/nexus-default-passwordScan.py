@@ -1,7 +1,7 @@
 import requests,re,urllib3,base64
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(url):
+def doCheck(url):
 	total=[]
 	response = requests.get(url,verify=False,timeout=10)
 	if "Nexus" in response.text:

@@ -1,7 +1,7 @@
 import requests,re,urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+"uapws/service/nc.itf.ses.inittool.PortalSESInitToolService"
 	body='''<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:por="http://inittool.ses.itf.nc/PortalSESInitToolService">
  <soapenv:Header/>

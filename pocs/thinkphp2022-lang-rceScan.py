@@ -25,7 +25,7 @@ def randomLowercase(n):
 	return key
 filename=randomLowercase(8)
 content=randomInt(100000,999999)
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

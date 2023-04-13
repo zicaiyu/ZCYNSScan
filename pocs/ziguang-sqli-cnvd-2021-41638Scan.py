@@ -9,7 +9,7 @@ a1=randomInt(200, 900)
 def substr(strs,s,lens):
 	result=strs[s:s+lens]
 	return result
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

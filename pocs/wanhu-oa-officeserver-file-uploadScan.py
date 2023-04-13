@@ -19,7 +19,7 @@ def randomLowercase(n):
 	return key
 s2=randomLowercase(20)
 s3=base64_encoding(str("../../public/edit/" + s2 + ".jsp"))
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

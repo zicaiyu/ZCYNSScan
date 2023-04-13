@@ -7,7 +7,7 @@ headers = {
 	'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 12_10) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/12.0 Safari/1200.1.25'
 }
 
-def scan(target_url):
+def doCheck(target_url):
 	target_url=target_url+'mobile/DBconfigReader.jsp'
 	try:
 		res = requests.get(url=target_url, headers=headers, timeout=10, verify=False,proxies=proxies)

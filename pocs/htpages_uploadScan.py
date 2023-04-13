@@ -11,7 +11,7 @@ def randomLowercase(n):
         key+=zf[suiji1]
     return key
 content=randomLowercase(8)
-def scan(url):
+def doCheck(url):
     if 'http' not in url:
         url='http://'+url
     path=get_path(url)

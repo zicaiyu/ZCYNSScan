@@ -2,7 +2,7 @@ import requests
 import base64
 import requests,urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(url):
+def doCheck(url):
 	response = requests.get(url,verify=False,timeout=5)
 	if "tomcat" in response.text and "manager/html" in response.text:
 		if url[-1]=='/':

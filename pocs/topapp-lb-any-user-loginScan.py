@@ -19,7 +19,7 @@ def randomLowercase(n):
 		key+=zf[suiji1]
 	return key
 tmp_username=randomLowercase(8)
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=="/":
 		baseurl=baseurl
 	else:

@@ -11,7 +11,7 @@ def randomInt(s,e):
 	key=random.randint(int(s),int(e))
 	return key
 r2=randomInt(1000, 9999)
-def scan(url):
+def doCheck(url):
 	try:
 		r=requests.get(url,verify=False)
 		reditList = r.history

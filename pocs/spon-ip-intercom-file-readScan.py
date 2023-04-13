@@ -1,7 +1,7 @@
 import requests,re,urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(baseurl):
+def doCheck(baseurl):
 	if baseurl[-1]=='/':
 		baseurl=baseurl
 	else:

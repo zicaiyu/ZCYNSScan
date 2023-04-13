@@ -1,6 +1,6 @@
 import requests,re,urllib3,random
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-def scan(urls):
+def doCheck(urls):
     filename=''
     content=''
     zf='1234567890qwertyuiopasdfghjklzxcvbnm'

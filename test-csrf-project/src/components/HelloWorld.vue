@@ -34,7 +34,7 @@
             }
         </textarea>
         <div>
-            <label>请求参数：</label>
+            <label>请求参数： </label>
             <textarea v-model="params" class="param-input"></textarea>
         </div>
 

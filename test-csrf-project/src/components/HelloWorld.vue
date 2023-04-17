@@ -12,8 +12,8 @@
         <div>
             <label>请求类型：</label>
             <select v-model="method">
-                <option value="GET">GET</option>
                 <option value="POST">POST</option>
+                <option value="GET">GET</option>
                 <option value="PUT">PUT</option>
                 <option value="DELETE">DELETE</option>
             </select>
@@ -35,14 +35,14 @@
         </textarea>
         <div>
             <label>请求参数： </label>
-            <textarea v-model="params" class="param-input"></textarea>
+            <textarea v-model="body" class="param-input"></textarea>
         </div>
-
-        <button @click="sendRequest">发送</button>
         <div>
-            <h2>响应结果</h2>
-            <pre>{{ response }}</pre>
+            <h2>Cookie</h2>
+            <textarea v-model="cookie" class="param-input"></textarea>
         </div>
+        <button @click="sendRequest">发送</button>
+
     </div>
 </template>
 
@@ -57,33 +57,26 @@
         data() {
             return {
                 url: "",
-                method: "GET",
-                params: "",
-                response: "",
+                method: "POST",
+                body: "",
+                cookie: "",
             };
         },
         methods: {
             sendRequest() {
-                const headers = {};
-                headers['Origin'] = this.url;
-                if (this.method === 'post' || this.method === 'put') {
-                    headers['Content-Type'] = 'application/json';
-                    this.params = JSON.parse(this.params);
-                }
-                // 根据选择的请求类型和请求参数发送HTTP请求
-                // 将响应结果存储到 response 属性中
-                // 这里使用 axios 库来发送请求
-                axios({
-                    method: this.method,
+                axios.post('http://127.0.0.1:8082/test/csrf', {
+                    data: {
                     url: this.url,
-                    data: this.params,
-                    headers: headers,
-                })
-                    .then((response) => {
-                        this.response = JSON.stringify(response.data, null, 2);
+                    body: this.body,
+                    cookie: this.cookie,
+                }}, {
+                    withCredentials: true, headers: {"Content-Type": "application/json"}}
+                    )
+                    .then(response => {
+                        console.log(response.data);
                     })
-                    .catch((error) => {
-                        this.response = JSON.stringify(error.response.data, null, 2);
+                    .catch(error => {
+                        console.log(error);
                     });
             },
         },

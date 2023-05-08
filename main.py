@@ -99,7 +99,7 @@ def runTask(targets, total):
             flag = module.doCheck(url)
             if flag:
                 print(f"[+++++++]    {url}   {pocName}")
-                ff = open("results/result.txt", 'a', encoding="utf-8")
+                ff = open("./results/result.txt", 'a', encoding="utf-8")
                 ff.write(f"{flag}\n")
                 ff.close()
             else:

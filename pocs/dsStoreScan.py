@@ -1,0 +1,30 @@
+import requests
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+
+def doCheck(url):
+    if url[-1] != "/":
+        url = url + "/"
+    targetUrl = url + ".DS_Store"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0"
+    }
+    response = requests.get(targetUrl, headers=headers, timeout=10, verify=False)  # verify=False不验证网站的ca证书
+    status = response.status_code  # HTTP请求返回状态码
+
+    text = response.text  # HTTP请求返回状态码
+    # print(response.headers['Content-Type'])
+    if (status == 200 or status == 206) and "application/octet-stream" == response.headers['Content-Type']:
+        return targetUrl
+    return False
+
+
+if __name__ == '__main__':
+    # print(doCheck("http://jdwx-open.daojia.com/"))
+    # print(doCheck("http://todclb.dxy.cn/"))
+    # print(doCheck("http://jdwx4g-open.daojia.com/"))
+    # print(doCheck("http://hotel-h1.17u.cn/"))
+    # print(doCheck("http://chong.m.fenqile.com/"))
+    print(doCheck("http://smdb.jtexpress.com.cn/"))

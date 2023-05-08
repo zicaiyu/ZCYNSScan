@@ -6,7 +6,7 @@ import os
 
 def split(filePath, sub, buf):
     [desFileNmae, extname] = os.path.splitext(filePath)
-    newFilename = desFileNmae + "/butianIpWeightGreaterThenThree" + str(sub) + extname
+    newFilename = desFileNmae + "/butiangongyi" + str(sub) + extname
     with open(newFilename, 'wb') as fout:
         fout.write(buf)
         return sub + 1
@@ -24,4 +24,4 @@ def fileSplit100(filePath, size):
 
 
 if __name__ == "__main__":
-    fileSplit100("../../data/butianIpWeightGreaterThenThree.txt", 80000)
+    fileSplit100("../../data/butiangongyi.txt", 200000)

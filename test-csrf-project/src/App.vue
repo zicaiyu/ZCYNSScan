@@ -1,5 +1,5 @@
 <template>
-  <img alt="project logo" src="./assets/avatar.jpg">
+<!--  <img alt="project logo" src="./assets/avatar.jpg">-->
   <HelloWorld msg="Go try that website to see if it has CSRF"/>
 </template>
 

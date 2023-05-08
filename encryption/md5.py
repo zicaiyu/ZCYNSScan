@@ -12,4 +12,4 @@ def md5(str):
 
 
 if __name__ == "__main__":
-    print(md5("admin-token"))
+    print(md5("freightsmart.oocl.com"))

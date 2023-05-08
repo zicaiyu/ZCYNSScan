@@ -1,6 +1,6 @@
 import random
 """
-对文件每行进行乱序重新排序
+对文件每行进行排序
 """
 
 
@@ -25,4 +25,4 @@ def reverseString(str):
 
 
 if __name__ == "__main__":
-    fileContentSort("../data/bt.txt", "../data/bt1.txt")
+    fileContentSort("../../results/1.txt", "../../results/result.txt")

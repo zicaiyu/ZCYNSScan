@@ -16,4 +16,4 @@ def doCheck(url):
 
 
 if __name__ == '__main__':
-    print(doCheck("https://dsc.aeonlife.com.cn/"))
+    print(doCheck("https://monitor-web-us.dotfashion.cn/"))

@@ -14,7 +14,7 @@ def doCheck(url):
     if response.status_code == 401:
         r0 = True
     else:
-        r0 = False
+        return False
 
     total = []
     n = 0
@@ -49,4 +49,4 @@ def doCheck(url):
 
 
 if __name__ == '__main__':
-    print(doCheck("https://dsc.aeonlife.com.cn/"))
+    print(doCheck("https://monitor-web-us.dotfashion.cn/"))

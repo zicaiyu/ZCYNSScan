@@ -24,5 +24,5 @@ def doCheck(url):
 
 
 if __name__ == '__main__':
-    print(doCheck("http://www.dituhui.com/"))
+    print(doCheck("http://112.124.240.175:8221/"))
     # print(doCheck("http://api-ddx.dmall.com/"))

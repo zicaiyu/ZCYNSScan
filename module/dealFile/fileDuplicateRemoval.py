@@ -1,6 +1,6 @@
 import random
 """
-对文件内容进行去重后乱序排序 
+对文件内容进行去重后乱序排序
 """
 def fileDuplicateRemoval(filePath, outFilePath):
     lines = []

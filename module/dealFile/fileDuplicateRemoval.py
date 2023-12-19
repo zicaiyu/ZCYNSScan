@@ -16,4 +16,4 @@ def fileDuplicateRemoval(filePath, outFilePath):
 
 
 if __name__ == "__main__":
-    fileDuplicateRemoval("../../data/1.txt", "../../data/butiangongyi.txt")
+    fileDuplicateRemoval("../../data/fenbi.txt", "../../data/fenbi.txt")

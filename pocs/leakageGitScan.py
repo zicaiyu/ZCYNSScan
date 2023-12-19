@@ -14,7 +14,7 @@ def doCheck(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0"
     }
-    response = requests.get(targetUrl, headers=headers, timeout=10, verify=False)  # verify=False不验证网站的ca证书
+    response = requests.get(targetUrl, headers=headers, timeout=5, verify=False)  # verify=False不验证网站的ca证书
     status = response.status_code  # HTTP请求返回状态码
     text = response.text  # HTTP请求返回状态码
     # print(text)
@@ -24,5 +24,5 @@ def doCheck(url):
 
 
 if __name__ == '__main__':
-    print(doCheck("http://112.124.240.175:8221/"))
+    print(doCheck("https://www.xianzhuanxia.com/"))
     # print(doCheck("http://api-ddx.dmall.com/"))

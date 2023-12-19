@@ -6,13 +6,10 @@ import random
 
 def fileContentSort(filePath, outFilePath):
     lines = []
-    linesTmp = []
     with open(filePath, 'r', encoding="utf-8") as f:
         for line in f:
-            linesTmp.append(reverseString(line))
-    linesTmp.sort()
-    for l in linesTmp:
-        lines.append(reverseString(l))
+            lines.append(line)
+    lines.sort()
 
     outFile = open(outFilePath, 'w', encoding="utf-8")
     for line in lines:
@@ -20,9 +17,5 @@ def fileContentSort(filePath, outFilePath):
     outFile.close()
 
 
-def reverseString(str):
-    return str[::-1]
-
-
 if __name__ == "__main__":
-    fileContentSort("../../results/1.txt", "../../results/result.txt")
+    fileContentSort("../../data/tmp.txt", "../../data/result.txt")

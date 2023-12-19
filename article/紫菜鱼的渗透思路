@@ -2,6 +2,7 @@
 Chrome浏览器安装相关插件：Disable JavaScript、ModHeader - Modify HTTP headers、Proxy SwitchyOmega、
 User-Agent Switcher for Chrome、Wappalyzer - Technology profiler、WebRTC Network Limiter、隐私獾
 网络：VPS+v2ray+树莓派 或者 VPN：ExpressVPN、StrongVPN
+工具：Yakit
 
 
 
@@ -46,3 +47,63 @@ Google Dork 或者 BBScan（容易被封ip） Google Dork相关语法如下:
 
 XML注入
 Java的XXE支持file://协议列目录  如：file:///etc/passwd
+
+看到webpack使用Packer Fuzzer
+
+
+CNVD漏洞挖掘：
+https://www.freebuf.com/articles/web/280616.html
+
+脚本工具：
+JBOSS检测：github里的jexboss
+
+越权
+看到返回包有id的可以看看是否存在越权
+
+XSS
+加注释符/**/绕过
+常用payload：
+"'></textarea><h1>x</h1>x//
+<img>
+<iframe>
+<marquee loop=1 width=0 onfinish=alert`1`>XSS</marquee>
+<svg/onload=alert('XSS')>
+<script>alert(1)</script>
+
+
+社会工程学密码生成器
+https://www.shentoushi.top/tools/distplus/index.html
+
+上传文件
+web.config webshell
+
+手机到框架漏洞去这里找找POC
+https://www.cnvd.org.cn/
+https://nvd.nist.gov
+https://cn.0day.today/
+https://www.exploit-db.com/
+https://sploitus.com/
+https://vuldb.com/zh/
+
+常见工具识别
+whatweb:https://github.com/urbanadventurer/WhatWeb
+在线cms识别:http://whatweb.bugscaner.com
+潮汐指纹:http://finger.tidesec.net/
+数字观星:https://fp.shuziguanxing.com/#/
+云悉:http://www.yunsee.cn/finger.html
+Wappalyzer:https://github.com/AliasIO/wappalyzer
+
+使用cgi技术且存在cgi、sh文件，可能存在破壳漏洞
+
+
+查看进程是否存在缓存漏洞：edb-debugger
+在输入位置上输入多个同样的字符
+如果ESP和EIP寄存器都是同样的字符，则存在缓存漏洞
+EIP寄存器存放的是cup下次即将执行的指令的地址，ESP寄存器是存放具体的代码
+使用msf-pattern_offset来查询EIP寄存器的内容的偏移量
+来确定哪些位置存放的是EIP寄存器的内容
+然后寻找一条jmp ESP的指令，然后构造一个payload执行反弹shell
+寻找esp指向eip
+将jmp esp的操作码记录下来
+但是需要将操作码反过来，因为eip寄存器的操作码是相反的
+使用msfvenom生成一段反弹shell，-b过滤\x00字符，-p生成py文件

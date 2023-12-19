@@ -22,9 +22,4 @@ def doCheck(url):
 
 
 if __name__ == '__main__':
-    # print(doCheck("http://jdwx-open.daojia.com/"))
-    # print(doCheck("http://todclb.dxy.cn/"))
-    # print(doCheck("http://jdwx4g-open.daojia.com/"))
-    # print(doCheck("http://hotel-h1.17u.cn/"))
-    # print(doCheck("http://chong.m.fenqile.com/"))
-    print(doCheck("http://smdb.jtexpress.com.cn/"))
+    print(doCheck("https://www.xianzhuanxia.com/"))

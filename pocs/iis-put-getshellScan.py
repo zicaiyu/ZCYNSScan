@@ -54,4 +54,4 @@ def doCheck(url):
 
 
 if __name__ == '__main__':
-    print(doCheck("https://autodiscover.equippool.com/"))
+    print(doCheck("https://www.oocl.com/"))

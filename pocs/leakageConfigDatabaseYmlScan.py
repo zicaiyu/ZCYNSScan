@@ -21,5 +21,4 @@ def doCheck(url):
 
 
 if __name__ == '__main__':
-    print(doCheck("http://www.dituhui.com/"))
-    # print(doCheck("http://api-ddx.dmall.com/"))
+    print(doCheck("https://www.xianzhuanxia.com/"))
